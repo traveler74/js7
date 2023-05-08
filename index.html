@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Колесо удачи</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="1.js" defer></script>
+    <link href="1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <div id="wrap">
+
+    <div id="leftField">
+
+      <div id="questionWrap">
+        <h2 id="question"></h2>
+      </div>
+
+      <div id="wordWrap">
+        <h1 id="word"></h1>
+        <input type="text" id="guessLetter">
+        <button id="submitLetter">Ввести букву</button>
+<!--        <input type="text" id="guessWord">-->
+<!--        <button id="submitWord">Ввести слово</button>-->
+        <h2 id="moveScores"></h2>
+      </div>
+
+      <div id="gameWrap">
+
+          <div id="wheelWrap">
+              <button id="spin"><img src="img/wheel.png" alt="wheel"></button>
+              <img id="arrow" src="img/arrow.png" alt="arrow">
+          </div>
+
+
+
+      </div>
+
+    </div><div id="rightField">
+
+      <div id="scoresWrap">
+          <h2 id="scores"></h2>
+      </div>
+
+      <div id="prizesWrap">
+
+          <h2>Выберите ваш приз</h2>
+          <div id="prizes">
+              <button id="banana">
+                  <img src="img/banana.png" alt="banana">
+                  <p>1000 очков</p>
+              </button>
+              <button id="tv">
+                  <img src="img/tv.png" alt="tv">
+                  <p>2000 очков</p>
+              </button>
+              <button id="car">
+                  <img src="img/car.png" alt="car">
+                  <p>3000 очков</p>
+              </button>
+          </div>
+
+
+      </div>
+
+      <div id="giftsWrap">
+          <h2>Выберите подарок ведущему</h2>
+          <div id="gifts">
+              <button id="hat">
+                  <img src="img/hat.png" alt="hat">
+                  <p>200 очков</p>
+              </button>
+              <button id="picules">
+                  <img src="img/picules.png" alt="picules">
+                  <p>400 очков</p>
+              </button>
+              <button id="glasses">
+                  <img src="img/glasses.png" alt="glasses">
+                  <p>500 очков</p>
+              </button>
+          </div>
+      </div>
+
+
+
+      <div id="hostWrap">
+
+          <div id="giftsOnHost">
+              <img id="host" src="img/host.jpg" alt="host">
+              <img id="hatOnHost" src="img/hat.png" alt="hat">
+              <img id="piculesOnHost" src="img/picules.png" alt="picules">
+              <img id="glassesOnHost" src="img/glasses.png" alt="glasses">
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>

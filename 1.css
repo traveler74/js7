@@ -1,0 +1,243 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+/*оформление игрового поля*/
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #4e8d37;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/*div{*/
+/*    border: black dotted 1px;*/
+/*}*/
+
+#wrap{
+    height: 100vh;
+}
+
+#leftField, #rightField{
+    float: left;
+    height: 100%;
+}
+
+#leftField{
+    width: 60%;
+}
+
+#rightField{
+    width: 40%;
+}
+
+#questionWrap, #scoresWrap{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wordWrap{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#gameWrap{
+    height: 65%;
+    position: relative;
+
+}
+
+#hostWrap{
+    height: 40%;
+    position: relative;
+}
+
+#prizesWrap, #giftsWrap{
+    height: 25%;
+}
+
+#guessLetter, #submitLetter{
+    z-index: 100;
+}
+
+/*барабан*/
+#wheelWrap{
+    /*height: 100%;*/
+    /*width: min-content;*/
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+#spin{
+    /*height: 100%;*/
+    width: 100%;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+    transform: rotate(var(--currentDeg));
+    z-index: 0;
+}
+
+#spin img{
+    /*height: 100%;*/
+    width: 100%;
+    z-index: 0;
+}
+
+#spin:disabled{
+    cursor: unset;
+}
+
+/*анимация барабана*/
+.spinWheel{
+    animation: spin 1.5s ease;
+}
+
+:root{
+    --spinDeg: 0deg;
+    --currentDeg: 0deg;
+}
+
+@keyframes spin {
+    from{
+        rotate: 0;
+    }
+    to{
+        rotate: calc(var(--spinDeg));
+    }
+}
+/*колесо*/
+
+/*#wheel{*/
+/*    width: max-content;*/
+/*}*/
+
+/*стрелка*/
+#arrow{
+    width: 20%;
+    position: absolute;
+    left: 97%;
+    top: 42%;
+}
+
+/*призы*/
+#prizesWrap h2{
+    margin: 0;
+    text-align: center;
+}
+
+#prizes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+#prizes button{
+    width: 20%;
+    /*height: 50%;*/
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+}
+
+#prizes img{
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.25s;
+}
+
+#prizes p{
+    background-color: cornflowerblue;
+    border-radius: 3px;
+    padding: 3% 0;
+}
+
+#prizes img:hover{
+    transform: scale(1.5);
+}
+
+
+
+/*подарки*/
+
+#giftsWrap h2{
+    margin: 0;
+    text-align: center;
+}
+
+#gifts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+#gifts button{
+    width: 20%;
+    /*height: 50%;*/
+    background-color: unset;
+    border: none;
+}
+
+#gifts img{
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.25s;
+}
+
+#gifts p{
+    background-color: cornflowerblue;
+    border-radius: 3px;
+    padding: 3% 0;
+}
+
+#gifts img:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+
+/*ведущий*/
+#giftsOnHost{
+    position: relative;
+}
+
+#host{
+    width: 60%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+
+}
+
+
+
+#hatOnHost, #piculesOnHost, #glassesOnHost{
+    width: 20%;
+    position: absolute;
+}
+
+
+#hatOnHost {
+    top: -10%;
+    left: 47%;
+}
+
+#piculesOnHost{
+    top: 45%;
+    left: 15%;
+}
+
+#glassesOnHost{
+    top: 3%;
+    left: 49%;
+}
